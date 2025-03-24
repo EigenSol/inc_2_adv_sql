@@ -1,0 +1,55 @@
+- users
+id
+name
+phone
+email
+password (hash)
+avatar
+dp_src
+
+- generated_images
+id
+user_id
+prompt
+image_src
+
+- products
+id : 1
+name : "Cup"
+price : $10
+description : "..."
+preview_imgae_src : "..."
+
+
+- product_varients
+id : 1
+product_id : 1
+name : "size"
+default_value : "small"
+
+- product_varient_values
+id : 3
+product_varient_id : 1
+value : "large"
+price : $4.24
+
+
+- order
+id : 1
+user_id : 1
+generated_image_id : 1
+product_id : 1
+price : $14.24
+status : 'pending-payment'
+
+- order_product_varients
+id : 1
+order_id : 1
+product_varient_id : 1
+product_varient_value_id : 3
+
+
+- transactions
+id
+order_id
+...

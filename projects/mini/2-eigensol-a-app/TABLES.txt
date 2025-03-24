@@ -1,0 +1,53 @@
+- users
+id
+fname
+lname
+email
+password (hash: md5)
+role (admin | employee | client | customer | vendor | member)
+created_at
+updated_at
+
+- auth_tokens
+id
+user_id
+tokken
+valid_till
+created_at
+updated_at
+
+- transaction_categories
+id
+name (asset | expense | investment | balance)
+
+- transactions
+id
+type (credit | debit)
+ref_id
+transaction_category_id
+label
+notes
+amount (5000)
+value (5000)
+timetamp
+created_at
+updated_at
+created_by (users:id)
+
+- salaries
+id
+month
+employee_id
+transaction_id
+
+- exports
+id
+exported_by (admin_id, users:id)
+type (balance-sheet | salary-slip | transactions-slip)
+src (file)
+generated_at
+label
+notes
+created_at
+updated_at
+
